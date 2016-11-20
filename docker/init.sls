@@ -112,6 +112,7 @@ docker-service:
 docker-py requirements:
   pkg.installed:
     - name: python-pip
+    - name: python-setuptools
   pip.installed:
     {%- if "pip" in docker and "version" in docker.pip %}
     - name: pip {{ docker.pip.version }}
